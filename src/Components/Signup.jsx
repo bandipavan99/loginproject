@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Auth.css";
+import "./Signup.css";
 
 const Signup = ({ setUserData }) => {
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [formData, setFormData] = useState({ username: "", email: "", password: "", confirmPassword: "" });
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -12,8 +12,13 @@ const Signup = ({ setUserData }) => {
   };
 
   const handleSignup = () => {
-    if (!formData.username || !formData.password) {
+    if (!formData.username || !formData.email || !formData.password || !formData.confirmPassword) {
       setError("All fields are required!");
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      setError("Passwords do not match!");
       return;
     }
 
@@ -22,7 +27,6 @@ const Signup = ({ setUserData }) => {
       return;
     }
 
-    // Save user data to local storage
     localStorage.setItem("userData", JSON.stringify(formData));
     setUserData(formData);
 
@@ -31,34 +35,36 @@ const Signup = ({ setUserData }) => {
   };
 
   return (
-    <div className="auth-container">
-      <h2 className="auth-title">Create an Account</h2>
-      {error && <p className="auth-error">{error}</p>}
-      
-      <input 
-        type="text" 
-        name="username" 
-        placeholder="Enter your username" 
-        value={formData.username} 
-        onChange={handleChange} 
-        className="auth-input" 
-      />
+    <div className="signup-container">
+      {/* Left Section */}
+      <div className="signup-left">
+        <h2>Come join us!</h2>
+        <p>
+          We are so excited to have you here. If you haven't already, create an account to get access
+          to exclusive offers, rewards, and discounts.
+        </p>
+        <button className="secondary-button" onClick={() => navigate("/login")}>Already have an account? Sign in</button>
+      </div>
 
-      <input 
-        type="password" 
-        name="password" 
-        placeholder="Create a password" 
-        value={formData.password} 
-        onChange={handleChange} 
-        className="auth-input" 
-      />
+      {/* Right Section */}
+      <div className="signup-right">
+        <h2 className="signup-title">Signup</h2>
+        {error && <p className="signup-error">{error}</p>}
+        
+        <input type="text" name="username" placeholder="Enter your username" value={formData.username} onChange={handleChange} className="signup-input" />
+        <input type="email" name="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} className="signup-input" />
+        <input type="password" name="password" placeholder="Create a password" value={formData.password} onChange={handleChange} className="signup-input" />
+        <input type="password" name="confirmPassword" placeholder="Confirm password" value={formData.confirmPassword} onChange={handleChange} className="signup-input" />
 
-      <button onClick={handleSignup} className="auth-button">Sign Up</button>
+        <button className="signup-button" onClick={handleSignup}>Signup</button>
 
-      <p className="auth-footer">
-        Already have an account? 
-        <button className="link-button" onClick={() => navigate("/login")}>Login</button>
-      </p>
+        <p className="signup-footer">or signup with</p>
+        <div className="social-icons">
+          <button className="social-btn fb">F</button>
+          <button className="social-btn google">G+</button>
+          <button className="social-btn linkedin">in</button>
+        </div>
+      </div>
     </div>
   );
 };

@@ -51,7 +51,11 @@ const Login = ({ userData, setAuthenticated }) => {
         />
       </div>
       <button className="login-button" onClick={handleLogin}>Login</button>
-      <p>Don't have an account? <button className="link-button" onClick={() => navigate("/")}>Sign Up</button></p>
+
+      {/* Updated Sign Up Button */}
+      <p>Don't have an account? 
+        <button className="link-button" onClick={() => navigate("/signup")}>Sign Up</button>
+      </p>
     </div>
   );
 };
