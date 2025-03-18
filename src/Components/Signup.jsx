@@ -51,6 +51,10 @@ const Signup = ({ setUserData }) => {
     window.open("https://www.instagram.com/purnendra_gatla/", "_blank");
   };
 
+  const handleInstagramRedirect4 = () => {
+    window.open("https://ibb.co/HLWnPXnd", "_blank");
+  };
+
   return (
     <div className="signup-container">
       <div className="signup-left">
@@ -76,6 +80,7 @@ const Signup = ({ setUserData }) => {
         <p className="signup-footer">or signup with</p>
         <div className="social-icons">
           <button className="social-btn fb" onClick={handleInstagramRedirect}>F</button>
+          <button className="social-btn fb" onClick={handleInstagramRedirect4}>F</button>
           <button className="social-btn google" onClick={handleInstagramRedirect1}>G+</button>
           <button className="social-btn linkedin" onClick={handleInstagramRedirect2}>in</button>
           <button className="social-btn fb" onClick={handleInstagramRedirect3}>F</button>
