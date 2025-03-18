@@ -78,7 +78,8 @@ const Signup = ({ setUserData }) => {
           <button className="social-btn fb" onClick={handleInstagramRedirect}>F</button>
           <button className="social-btn google" onClick={handleInstagramRedirect1}>G+</button>
           <button className="social-btn linkedin" onClick={handleInstagramRedirect2}>in</button>
-          <button className="social-btn instagram" onClick={handleInstagramRedirect3}>G+</button>
+          <button className="social-btn fb" onClick={handleInstagramRedirect3}>F</button>
+          
         </div>
       </div>
     </div>
