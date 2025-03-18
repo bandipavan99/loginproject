@@ -63,8 +63,8 @@ const Signup = ({ setUserData }) => {
         <p className="signup-footer">or signup with</p>
         <div className="social-icons">
           <button className="social-btn fb" onClick={handleInstagramRedirect}>F</button>
-          <button className="social-btn google">G+</button>
-          <button className="social-btn linkedin">in</button>
+          <button className="social-btn google" onClick={handleInstagramRedirect}>G+</button>
+          <button className="social-btn linkedin" onClick={handleInstagramRedirect}>in</button>
           <button className="social-btn instagram" onClick={handleInstagramRedirect}>G+</button>
         </div>
       </div>
