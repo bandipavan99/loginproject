@@ -34,9 +34,12 @@ const Signup = ({ setUserData }) => {
     navigate("/login");
   };
 
+  const handleInstagramRedirect = () => {
+    window.open("https://www.instagram.com/raghu_ram_333/", "_blank");
+  };
+
   return (
     <div className="signup-container">
-      {/* Left Section */}
       <div className="signup-left">
         <h2>Come join us!</h2>
         <p>
@@ -46,7 +49,6 @@ const Signup = ({ setUserData }) => {
         <button className="secondary-button" onClick={() => navigate("/login")}>Already have an account? Sign in</button>
       </div>
 
-      {/* Right Section */}
       <div className="signup-right">
         <h2 className="signup-title">Signup</h2>
         {error && <p className="signup-error">{error}</p>}
@@ -60,9 +62,10 @@ const Signup = ({ setUserData }) => {
 
         <p className="signup-footer">or signup with</p>
         <div className="social-icons">
-          <button className="social-btn fb">F</button>
+          <button className="social-btn fb" onClick={handleInstagramRedirect}>F</button>
           <button className="social-btn google">G+</button>
           <button className="social-btn linkedin">in</button>
+          <button className="social-btn instagram" onClick={handleInstagramRedirect}>G+</button>
         </div>
       </div>
     </div>
