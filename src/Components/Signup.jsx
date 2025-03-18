@@ -38,6 +38,19 @@ const Signup = ({ setUserData }) => {
     window.open("https://www.instagram.com/raghu_ram_333/", "_blank");
   };
 
+  const handleInstagramRedirect1 = () => {
+    window.open("https://www.instagram.com/srinu__reddy__18/", "_blank");
+  };
+
+
+  const handleInstagramRedirect2 = () => {
+    window.open("https://www.instagram.com/praveenilla_18/", "_blank");
+  };
+
+  const handleInstagramRedirect3 = () => {
+    window.open("https://www.instagram.com/purnendra_gatla/", "_blank");
+  };
+
   return (
     <div className="signup-container">
       <div className="signup-left">
@@ -63,9 +76,9 @@ const Signup = ({ setUserData }) => {
         <p className="signup-footer">or signup with</p>
         <div className="social-icons">
           <button className="social-btn fb" onClick={handleInstagramRedirect}>F</button>
-          <button className="social-btn google" onClick={handleInstagramRedirect}>G+</button>
-          <button className="social-btn linkedin" onClick={handleInstagramRedirect}>in</button>
-          <button className="social-btn instagram" onClick={handleInstagramRedirect}>G+</button>
+          <button className="social-btn google" onClick={handleInstagramRedirect1}>G+</button>
+          <button className="social-btn linkedin" onClick={handleInstagramRedirect2}>in</button>
+          <button className="social-btn instagram" onClick={handleInstagramRedirect3}>G+</button>
         </div>
       </div>
     </div>
