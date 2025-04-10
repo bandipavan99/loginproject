@@ -1,90 +1,83 @@
-/* General Styling */
-body {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-
-/* Login Container */
+/* Login Page Styles */
 .login-container {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 350px;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Title */
-.login-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #4a47a3;
-  margin-bottom: 15px;
-}
-
-/* Input Group */
-.login-input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Inputs */
-.login-input {
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: 0.3s ease-in-out;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.login-input:focus {
-  border-color: #6e8efb;
-  outline: none;
-  box-shadow: 0px 0px 8px rgba(110, 142, 251, 0.6);
+.login-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Error Message */
 .login-error {
-  color: red;
+  color: #ff4d4f;
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-/* Button */
-.login-button {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
+.login-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.login-input {
   padding: 12px;
   font-size: 16px;
-  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-input:focus {
+  border-color: #f5a623;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f5a623;
+  color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
 .login-button:hover {
-  background: linear-gradient(135deg, #5a7cfb, #9564e8);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f06d06;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.signup-redirect-text {
+  font-size: 14px;
+  color: #777;
+  margin-top: 15px;
+}
+
+.signup-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+.signup-button:hover {
+  background-color: #45a049;
 }

@@ -1,28 +1,56 @@
+/* Profile Page Styles */
 .profile-container {
-    animation: slideLeft 1s ease-in-out;
-    padding: 2rem;
-  }
-  
-  @keyframes slideLeft {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-  
-  .profile-title {
-    font-size: 2rem;
-    color: #2d3748;
-  }
-  
-  .profile-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: #4c51bf;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .profile-link:hover {
-    color: #6b46c1;
-  }
-  
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+.profile-ride-history {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ride-history {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #f06d06;
+}
